@@ -2,6 +2,7 @@ import axios from 'axios';
 
 const apiClient = axios.create({
   baseURL: process.env.REACT_APP_API_URL,
+  withCredentials: true // This is the key!  Allows sending and receiving credentials with the request
 });
 
 export const getWeatherForecast = async () => {
